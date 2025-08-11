@@ -1,0 +1,25 @@
+.menu-wrapper{
+        border-bottom: #FFA600 2px solid;
+    .links{
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        width: 50%;
+        margin: auto;
+        .menu-link{
+            padding-bottom: 10px;
+            a, a:visited{
+                color: #FFA600;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            a:hover{
+                text-decoration: underline;
+                text-underline-offset: 7px;
+            }
+            .on-page{
+                text-decoration: underline;
+            }
+        }
+    }
+}

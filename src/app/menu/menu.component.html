@@ -1,0 +1,24 @@
+<div class="menu-wrapper">
+    <div class="links">
+        <div class="menu-link">
+            <a routerLink="/home"  routerLinkActive="on-page">
+            Home</a
+            >
+        </div>
+        <div class="menu-link">
+            <a [routerLink]="['/about', { outlets: { about: ['about-us'] } }]" routerLinkActive="on-page">
+            About us</a
+            >
+        </div>
+        <div class="menu-link">
+            <a routerLink="/the-moss"  routerLinkActive="on-page">
+            The Moss</a
+            >
+        </div>
+        <div class="menu-link">
+            <a routerLink="/gallery"  routerLinkActive="on-page">
+            Photos</a
+            >
+        </div>
+    </div>
+</div>
