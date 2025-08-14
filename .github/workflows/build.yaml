@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  docker_image_tag: ryantodd/hashedSelkie_moss:0.0.${{ github.run_number }}
+  docker_image_tag: ryantodd/hashedselkie_moss:0.0.${{ github.run_number }}
 
 defaults:
   run:
