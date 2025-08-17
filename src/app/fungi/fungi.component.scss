@@ -1,0 +1,45 @@
+.fungi-wrapper{
+    h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .pics, .pic-text, h2{
+        border-bottom: 2px solid #005047;
+        padding: 0 0 30px 0;
+    }
+    .pic-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            padding: 20px;
+            max-width: 40%;
+            height: 100%;
+            min-width: 355px;
+        }
+        .text{
+            padding: 20px;
+            width: 35%;
+            min-width: 425px;
+        }
+        p:first-child{
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    .pics{
+        p{
+            text-align: center;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            img{
+                padding: 20px;
+                max-width: 40%;
+                height: 100%;
+                min-width: 200px;
+            }
+        }
+    }
+}
