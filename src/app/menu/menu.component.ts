@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-
+  toTop() {
+    window.scrollTo(0, 0);
+  }
 }

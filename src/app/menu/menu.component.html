@@ -1,22 +1,22 @@
 <div class="menu-wrapper">
     <div class="links">
         <div class="menu-link">
-            <a routerLink="/home"  routerLinkActive="on-page">
+            <a routerLink="/home" (click)="toTop()" routerLinkActive="on-page">
             Home</a
             >
         </div>
         <div class="menu-link">
-            <a [routerLink]="['/about']" routerLinkActive="on-page" [routerLinkActiveOptions]="{ exact: false }">
+            <a [routerLink]="['/about']" (click)="toTop()" routerLinkActive="on-page" [routerLinkActiveOptions]="{ exact: false }">
             About us</a
             >
         </div>
         <div class="menu-link">
-            <a [routerLink]="['/the-moss']" routerLinkActive="on-page" [routerLinkActiveOptions]="{ exact: false }">
+            <a [routerLink]="['/the-moss']" (click)="toTop()" routerLinkActive="on-page" [routerLinkActiveOptions]="{ exact: false }">
             The Moss</a
             >
         </div>
         <div class="menu-link">
-            <a routerLink="/gallery"  routerLinkActive="on-page">
+            <a routerLink="/gallery" (click)="toTop()" routerLinkActive="on-page">
             Photos</a
             >
         </div>
