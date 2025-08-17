@@ -6,12 +6,12 @@
             >
         </div>
         <div class="menu-link">
-            <a [routerLink]="['/about', { outlets: { about: ['about-us'] } }]" routerLinkActive="on-page">
+            <a [routerLink]="['/about']" routerLinkActive="on-page" [routerLinkActiveOptions]="{ exact: false }">
             About us</a
             >
         </div>
         <div class="menu-link">
-            <a routerLink="/the-moss"  routerLinkActive="on-page">
+            <a [routerLink]="['/the-moss']" routerLinkActive="on-page" [routerLinkActiveOptions]="{ exact: false }">
             The Moss</a
             >
         </div>

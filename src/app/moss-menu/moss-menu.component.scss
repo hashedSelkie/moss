@@ -1,0 +1,26 @@
+.menu-wrapper{
+    width: 200px;
+    .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 25px;
+        margin: 5% 10%;
+        height: 180px;
+        .menu-link{
+            padding-bottom: 10px;
+            a, a:visited{
+                color: #FFA600;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            a:hover{
+                text-decoration: underline;
+                text-underline-offset: 7px;
+            }
+            .on-page{
+                text-decoration: underline;
+            }
+        }
+    }
+}
