@@ -1,4 +1,16 @@
 .footer-wrapper{
     background-color: #003a33;
-    height: 100px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 50px;
+    }
+    a, a:hover, a:visited{
+        color: #FFA600;
+        text-decoration: none;
+        font-family: 'Goorm', sans-serif;
+        margin: 0 30px;
+    }
 }
