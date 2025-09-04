@@ -1,7 +1,44 @@
 .documents-wrapper{
-        font-size: 20px;
-        font-family: 'Goorm Regular';
-        min-width: 600px;
-        width: 45%;
-        margin: auto;
+        h3{
+                text-align: center;
+                font-weight: normal;
+                font-size: 30px;
+        }
+        .chairpersons-reports, .misc-docs{
+                font-size: 20px;
+                font-family: 'Goorm Regular';
+                min-width: 600px;
+                margin: auto;
+                columns: 3;
+                a, a:visited{
+                        color: #FFA600;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 300px;
+                        text-decoration: none;
+                        font-size: 20px;
+                        border-radius: 15px;
+                        box-shadow: 2px 2px 6px black;
+                        padding: 8px 15px;
+                        background: #004b42;
+                        margin: 0 auto 30px;
+                        min-height: 86px;
+                        text-align: center;
+                        svg{
+                                max-width: 30px;
+                                min-width: 30px;
+                        }
+                }
+                a:hover{
+                        background: #00463e;
+                }
+        }
+}
+
+
+@media screen and (max-width: 1500px) {
+        .chairpersons-reports{
+                columns: 2;
+        }
 }
