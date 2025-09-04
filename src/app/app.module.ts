@@ -60,7 +60,6 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
                     [
                         { path: '', redirectTo: '/about/(about:about-us)', pathMatch: 'full' },
                         { path: 'about-us', component: AboutUsComponent, outlet: 'about' },
-                        { path: 'visit-us', component: VisitComponent, outlet: 'about' },
                         { path: 'contact-us', component: ContactUsComponent, outlet: 'about' },
                         { path: 'newsletters', component: NewslettersComponent, outlet: 'about' },
                         { path: 'documents', component: DocumentsComponent, outlet: 'about' },
@@ -84,7 +83,8 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
                                     { path: 'wildlife-landing', component: WildlifeLandingComponent, outlet: 'wildlife' }
                                 ]
                         },
-                        { path: 'peatlands', component: PeatlandsComponent, outlet: 'moss' }
+                        { path: 'peatlands', component: PeatlandsComponent, outlet: 'moss' },
+                        { path: 'visit-us', component: VisitComponent, outlet: 'moss' }
                     ]
             },
             { path: 'gallery', component: GalleryComponent, data: { state: 'gallery' } },
