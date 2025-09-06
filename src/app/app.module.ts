@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,8 +30,7 @@ import { WildlifeMenuComponent } from './wildlife-menu/wildlife-menu.component';
 import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.component';
 
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         FooterComponent,
         HomeComponent,
@@ -49,51 +48,42 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
         WildlifeMenuComponent,
         WildlifeLandingComponent
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         RouterModule.forRoot([
             { path: 'home', component: HomeComponent, data: { state: 'home' } },
             {
                 path: 'about', component: AboutComponent, data: { state: 'about' },
-                children:
-                    [
-                        { path: '', redirectTo: '/about/(about:about-us)', pathMatch: 'full' },
-                        { path: 'about-us', component: AboutUsComponent, outlet: 'about' },
-                        { path: 'contact-us', component: ContactUsComponent, outlet: 'about' },
-                        { path: 'newsletters', component: NewslettersComponent, outlet: 'about' },
-                        { path: 'documents', component: DocumentsComponent, outlet: 'about' },
-                        { path: 'join-us', component: JoinUsComponent, outlet: 'about' }
-                    ]
+                children: [
+                    { path: '', redirectTo: '/about/(about:about-us)', pathMatch: 'full' },
+                    { path: 'about-us', component: AboutUsComponent, outlet: 'about' },
+                    { path: 'contact-us', component: ContactUsComponent, outlet: 'about' },
+                    { path: 'newsletters', component: NewslettersComponent, outlet: 'about' },
+                    { path: 'documents', component: DocumentsComponent, outlet: 'about' },
+                    { path: 'join-us', component: JoinUsComponent, outlet: 'about' }
+                ]
             },
             {
                 path: 'the-moss', component: TheMossComponent, data: { state: 'the-moss' },
-                children:
-                    [
-                        { path: '', redirectTo: '/the-moss/(moss:history)', pathMatch: 'full' },
-                        { path: 'history', component: HistoryComponent, outlet: 'moss' },
-                        {
-                            path: 'wildlife', component: WildlifeComponent, outlet: 'moss',
-                            children:
-                                [
-                                    { path: '', redirectTo: 'wildlife-landing', pathMatch: 'full', outlet: 'wildlife' },
-                                    { path: 'birds', component: BirdsComponent, outlet: 'wildlife' },
-                                    { path: 'fungi', component: FungiComponent, outlet: 'wildlife' },
-                                    { path: 'moths', component: MothsComponent, outlet: 'wildlife' },
-                                    { path: 'wildlife-landing', component: WildlifeLandingComponent, outlet: 'wildlife' }
-                                ]
-                        },
-                        { path: 'peatlands', component: PeatlandsComponent, outlet: 'moss' },
-                        { path: 'visit-us', component: VisitComponent, outlet: 'moss' }
-                    ]
+                children: [
+                    { path: '', redirectTo: '/the-moss/(moss:history)', pathMatch: 'full' },
+                    { path: 'history', component: HistoryComponent, outlet: 'moss' },
+                    {
+                        path: 'wildlife', component: WildlifeComponent, outlet: 'moss',
+                        children: [
+                            { path: '', redirectTo: 'wildlife-landing', pathMatch: 'full', outlet: 'wildlife' },
+                            { path: 'birds', component: BirdsComponent, outlet: 'wildlife' },
+                            { path: 'fungi', component: FungiComponent, outlet: 'wildlife' },
+                            { path: 'moths', component: MothsComponent, outlet: 'wildlife' },
+                            { path: 'wildlife-landing', component: WildlifeLandingComponent, outlet: 'wildlife' }
+                        ]
+                    },
+                    { path: 'peatlands', component: PeatlandsComponent, outlet: 'moss' },
+                    { path: 'visit-us', component: VisitComponent, outlet: 'moss' }
+                ]
             },
             { path: 'gallery', component: GalleryComponent, data: { state: 'gallery' } },
             //{ path: 'visit-us', component: VisitComponent, data: { state: 'visit-us' } },
             { path: '**', redirectTo: '/home', pathMatch: 'full' },
-        ]),
-        HttpClientModule,
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-})
+        ])], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
