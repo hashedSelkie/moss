@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +33,8 @@ import { WildlifeMenuComponent } from './wildlife-menu/wildlife-menu.component';
 import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.component';
 
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         FooterComponent,
         HomeComponent,
@@ -46,9 +50,15 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
         FungiComponent,
         MothsComponent,
         WildlifeMenuComponent,
-        WildlifeLandingComponent
+        WildlifeLandingComponent,
+        GalleryComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        GalleryModule,
+        LightboxModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
         RouterModule.forRoot([
             { path: 'home', component: HomeComponent, data: { state: 'home' } },
@@ -85,5 +95,6 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
             { path: 'gallery', component: GalleryComponent, data: { state: 'gallery' } },
             //{ path: 'visit-us', component: VisitComponent, data: { state: 'visit-us' } },
             { path: '**', redirectTo: '/home', pathMatch: 'full' },
-        ])], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        ])], providers: [provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule { }
