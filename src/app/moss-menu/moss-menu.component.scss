@@ -23,4 +23,42 @@
             }
         }
     }
+    .links-mobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1007px){
+    .menu-wrapper{
+        width: 95%;
+        margin: auto;
+        .links{
+            display: none;
+        }
+        .links-mobile{
+            display: block;
+            border-bottom: #FFA600 2px solid;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            .menu-link{
+                padding-bottom: 0px;
+                min-width: fit-content;
+                display:inline-block;
+                margin: 5px 4%;
+                a, a:visited{
+                    color: #FFA600;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+                a:hover{
+                    text-decoration: underline;
+                    text-underline-offset: 7px;
+                }
+                .on-page{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }

@@ -4,7 +4,15 @@
         min-width: 600px;
         width: 45%;
         margin: auto;
-        img{
+}
 
+
+@media screen and (max-width: 1007px){
+        .contact-us-wrapper{
+                font-size: 16px;
+                font-family: 'Goorm Regular';
+                min-width: 0px;
+                width: 90%;
+                margin: 50px auto;
         }
 }

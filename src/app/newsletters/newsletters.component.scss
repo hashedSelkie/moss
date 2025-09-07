@@ -39,3 +39,22 @@ h3{
                 columns: 2;
         }
 }
+
+
+@media screen and (max-width: 1007px){
+        h3{
+                text-align: center;
+                margin-top: 20px;
+                text-align: center;
+                font-weight: normal;
+                font-size: 30px;
+        }
+        .newsletters-wrapper{
+                font-size: 20px;
+                font-family: 'Goorm Regular';
+                min-width: 0;
+                margin: auto;
+                columns: 1;
+               
+        }
+}

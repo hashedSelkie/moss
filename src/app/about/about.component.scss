@@ -7,3 +7,15 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 1007px){
+    .about-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px auto;
+        .outlet-wrapper{
+            width: 100%;
+        }
+    }
+}

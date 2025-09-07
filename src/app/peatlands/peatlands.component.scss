@@ -1,7 +1,56 @@
-.peatlands-wrapper{
-    font-size: 20px;
-    font-family: 'Goorm Regular';
-    min-width: 600px;
+.peatlands-and-img{
+    display: flex;
     width: 45%;
-    margin: auto;
+    justify-content: space-between;
+    .peatlands-wrapper{
+        font-size: 20px;
+        font-family: 'Goorm Regular';
+        min-width: 520px;
+        width: 55%;
+        margin: auto;
+        h2{
+            text-align: center;
+            margin-top: -30px;
+        }
+        a, a:hover, a:visited{
+            color: #FFA600;
+        }
+    }
+    img{
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        padding: 20px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1007px){
+    .peatlands-and-img{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        .peatlands-wrapper{
+            font-size: 20px;
+            font-family: 'Goorm Regular';
+            min-width: 0px;
+            width: 100%;
+            margin: auto;
+            h2{
+                text-align: center;
+                margin-top: 30px;
+            }
+            a, a:hover, a:visited{
+                color: #FFA600;
+            }
+        }
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            padding: 20px 0px;
+            margin: auto;
+        }
+    }
 }

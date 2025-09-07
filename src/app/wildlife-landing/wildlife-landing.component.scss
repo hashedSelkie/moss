@@ -4,4 +4,38 @@
     min-width: 600px;
     width: 45%;
     margin: auto;
+    p{
+        text-align: center;
+    }
+    img{
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        padding: 20px 20px 0 20px;
+        margin: auto;
+    }
+    .image-text{
+        margin: 0;
+        font-style: italic;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1007px){
+    .wildlife-landing-wrapper{
+        font-size: 20px;
+        font-family: 'Goorm Regular';
+        min-width: 0px;
+        width: 100%;
+        margin: auto;
+        p{
+            text-align: center;
+        }
+        img{
+            display: none;
+        }
+        .image-text{
+            display: none;
+        }
+    }
 }

@@ -18,3 +18,26 @@
         padding: 30px;
     }
 }
+
+@media screen and (max-width: 1007px){
+    .wildlife-wrapper{
+        font-size: 20px;
+        font-family: 'Goorm Regular';
+        min-width: 0px;
+        //width: 45%;
+        margin: 20px auto;
+        box-shadow: 1px 2px 6px black;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        .outlet-wrapper{
+            background: #006e61;
+            width: 90%;
+            border-radius: 20px;
+            padding: 30px;
+        }
+    }
+}

@@ -1,14 +1,38 @@
-    .aim{
-        font-size: 20px;
-        font-family: 'Goorm Regular';
-        min-width: 600px;
-        width: 85%;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        div, img{
-            padding: 0 50px;
-            width: 30%;
-            min-width: 300px;
+.aim{
+    font-size: 20px;
+    font-family: 'Goorm Regular';
+    min-width: 600px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    div, img{
+        padding: 0 50px;
+        width: 30%;
+        min-width: 300px;
+        a, a:hover, a:visited{
+            color: #FFA600;
         }
     }
+}
+
+@media screen and (max-width: 1007px){
+    .aim{
+        font-size: 16px;
+        font-family: 'Goorm Regular';
+        min-width: 0;
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div, img{
+            padding: 0 10px;
+            width: 100%;
+            min-width: 0;
+            a, a:hover, a:visited{
+                color: #FFA600;
+            }
+        }
+    }
+}

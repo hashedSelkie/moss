@@ -23,4 +23,28 @@
             >
         </div>
     </div>
+    <div class="links-mobile">
+        <div class="menu-link">
+            <a [routerLink]="[{ outlets: { moss: ['history'] } }]" routerLinkActive="on-page">
+            History</a
+            >
+        </div>
+        <div class="menu-link">
+            <a [routerLink]="[{ outlets: { moss: ['wildlife'] } }]"
+                routerLinkActive="on-page"
+                [routerLinkActiveOptions]="{ exact: false }">
+                Wildlife
+            </a>
+        </div>
+        <div class="menu-link">
+            <a [routerLink]="[{ outlets: { moss: ['peatlands'] } }]"  routerLinkActive="on-page">
+           Peatlands</a
+            >
+        </div>
+        <div class="menu-link">
+            <a [routerLink]="[{ outlets: { moss: ['visit-us'] } }]"  routerLinkActive="on-page">
+           Visit</a
+            >
+        </div>
+    </div>
 </div>
