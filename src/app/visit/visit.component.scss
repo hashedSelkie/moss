@@ -2,8 +2,16 @@
     font-size: 20px;
     font-family: 'Goorm Regular';
     min-width: 600px;
-    width: 45%;
+    //width: 45%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .visit-info{
+        margin: 40px;
+    }
+    iframe{
+        min-width: 50%;
+    }
     h2{
         text-align: center;
         margin-top: -30px;
@@ -20,12 +28,16 @@
         min-width: 0px;
         width: 100%;
         margin: auto;
+        display: block;
         h2{
             text-align: center;
             margin-top: 30px;
         }
         a, a:hover, a:visited{
             color: #FFA600;
+        }
+        .visit-info{
+            margin: auto;
         }
         iframe{
             width: 100%;

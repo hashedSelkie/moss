@@ -31,11 +31,18 @@
             >
         </div>
         <div class="menu-link">
+            <a [routerLink]="[{ outlets: { about: ['old-news'] } }]"  routerLinkActive="on-page">
+           Previous news articles</a
+            >
+        </div>
+        <div class="menu-link">
             <a [routerLink]="[{ outlets: { about: ['join-us'] } }]"  routerLinkActive="on-page">
            Join us</a
             >
         </div>
     </div>
+
+
     <div class="links-mobile">
         <div class="menu-link">
             <a [routerLink]="[{ outlets: { about: ['about-us'] } }]" routerLinkActive="on-page">
@@ -55,6 +62,11 @@
         <div class="menu-link">
             <a [routerLink]="[{ outlets: { about: ['documents'] } }]"  routerLinkActive="on-page">
            Documents</a
+            >
+        </div>
+        <div class="menu-link">
+            <a [routerLink]="[{ outlets: { about: ['old-news'] } }]"  routerLinkActive="on-page">
+           Previous news articles</a
             >
         </div>
         <div class="menu-link">

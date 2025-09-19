@@ -31,7 +31,7 @@ import { FungiComponent } from './fungi/fungi.component';
 import { MothsComponent } from './moths/moths.component';
 import { WildlifeMenuComponent } from './wildlife-menu/wildlife-menu.component';
 import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.component';
-
+import { OldNewsComponent } from './old-news/old-news.component';
 
 @NgModule({
     declarations: [
@@ -51,7 +51,8 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
         MothsComponent,
         WildlifeMenuComponent,
         WildlifeLandingComponent,
-        GalleryComponent
+        GalleryComponent,
+        OldNewsComponent,
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -70,13 +71,14 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
                     { path: 'contact-us', component: ContactUsComponent, outlet: 'about' },
                     { path: 'newsletters', component: NewslettersComponent, outlet: 'about' },
                     { path: 'documents', component: DocumentsComponent, outlet: 'about' },
+                    { path: 'old-news', component: OldNewsComponent, outlet: 'about' },
                     { path: 'join-us', component: JoinUsComponent, outlet: 'about' }
                 ]
             },
             {
                 path: 'the-moss', component: TheMossComponent, data: { state: 'the-moss' },
                 children: [
-                    { path: '', redirectTo: '/the-moss/(moss:history)', pathMatch: 'full' },
+                    { path: '', redirectTo: '/the-moss/(moss:visit-us)', pathMatch: 'full' },
                     { path: 'history', component: HistoryComponent, outlet: 'moss' },
                     {
                         path: 'wildlife', component: WildlifeComponent, outlet: 'moss',
@@ -84,7 +86,7 @@ import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.co
                             { path: '', redirectTo: 'wildlife-landing', pathMatch: 'full', outlet: 'wildlife' },
                             { path: 'birds', component: BirdsComponent, outlet: 'wildlife' },
                             { path: 'fungi', component: FungiComponent, outlet: 'wildlife' },
-                            { path: 'moths', component: MothsComponent, outlet: 'wildlife' },
+                            { path: 'insects', component: MothsComponent, outlet: 'wildlife' },
                             { path: 'wildlife-landing', component: WildlifeLandingComponent, outlet: 'wildlife' }
                         ]
                     },
