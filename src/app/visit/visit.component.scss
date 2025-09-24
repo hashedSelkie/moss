@@ -20,6 +20,17 @@
         color: #FFA600;
     }
 }
+.aerial-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    iframe{
+        width: 100%;
+        min-height: 500px;
+    }
+}
 
 @media screen and (max-width: 1007px){
     .visit-wrapper{
@@ -41,6 +52,12 @@
         }
         iframe{
             width: 100%;
+        }
+    }
+    .aerial-video{
+        iframe{
+            width: 100%;
+            min-height: 0;
         }
     }
 }
