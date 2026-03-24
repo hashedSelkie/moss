@@ -27,6 +27,8 @@ import { WildlifeComponent } from './wildlife/wildlife.component';
 import { PeatlandsComponent } from './peatlands/peatlands.component';
 import { MossMenuComponent } from './moss-menu/moss-menu.component';
 import { BirdsComponent } from './birds/birds.component';
+import { PlantsComponent } from './plants/plants.component';
+import { AnimalsComponent } from './animals/animals.component';
 import { FungiComponent } from './fungi/fungi.component';
 import { MothsComponent } from './moths/moths.component';
 import { WildlifeMenuComponent } from './wildlife-menu/wildlife-menu.component';
@@ -87,6 +89,8 @@ import { OldNewsComponent } from './old-news/old-news.component';
                             { path: 'birds', component: BirdsComponent, outlet: 'wildlife' },
                             { path: 'fungi', component: FungiComponent, outlet: 'wildlife' },
                             { path: 'insects', component: MothsComponent, outlet: 'wildlife' },
+                            { path: 'plants', component: PlantsComponent, outlet: 'wildlife' },
+                            { path: 'animals', component: AnimalsComponent, outlet: 'wildlife' },
                             { path: 'wildlife-landing', component: WildlifeLandingComponent, outlet: 'wildlife' }
                         ]
                     },
