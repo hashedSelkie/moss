@@ -11,6 +11,78 @@
                 text-align: center;
                 margin-top: -30px;
         }
+        .subscription-form{
+                font-family: sans-serif;
+                color: #FFC355;
+                form{
+                                border: 2px solid #FFC355;
+                                border-radius: 20px;
+                                padding: 20px;
+                                margin: 20px;
+                        .form-inputs{
+                                p{
+                                        margin: 0;
+                                }
+                                input{
+                                        margin-bottom: 20px;
+                                }
+                        }
+                }
+                .sub-h2{
+                        text-align: center;
+                        margin-top: 0;
+                }
+                .payment-info{
+                        //margin-left: 40px;
+                        p{
+                                padding: 0;
+                                margin: 0;
+                        }
+                        .border{
+                                border: 2px solid #FFC355;
+                                border-radius: 20px;
+                                padding: 20px;
+                                margin: 20px;
+                        
+                        }
+                        .payment-details{
+                                display: flex;
+                                flex-direction: column;
+                                padding: 20px;
+                        }
+                        .or{
+                                text-align: center;
+                        }
+                }
+                #button-div{
+                        display: flex;
+                        justify-content: center;
+                        #submit-btn{
+                                margin: 30px;
+                                padding: 20px;
+                                border-radius: 20px;
+                                width: 100px;
+                                height: 30px;
+                                align-items: center;
+                                display: flex;
+                                justify-content: center;
+                                border: none;
+                        }
+                }
+                .gdpr-h3{
+
+                }
+        }
+        
+        
+        .all-contact-prefs{
+                display: flex;
+                .contact-pref{
+                        margin-right: 20px;
+                        display: flex;
+                }
+        }
+
 }
 
 @media screen and (max-width: 1007px){

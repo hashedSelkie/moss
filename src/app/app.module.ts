@@ -34,6 +34,7 @@ import { MothsComponent } from './moths/moths.component';
 import { WildlifeMenuComponent } from './wildlife-menu/wildlife-menu.component';
 import { WildlifeLandingComponent } from './wildlife-landing/wildlife-landing.component';
 import { OldNewsComponent } from './old-news/old-news.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 @NgModule({
     declarations: [
@@ -65,6 +66,7 @@ import { OldNewsComponent } from './old-news/old-news.component';
         AppRoutingModule,
         RouterModule.forRoot([
             { path: 'home', component: HomeComponent, data: { state: 'home' } },
+            { path: 'thank-you', component: ThankyouComponent, data: { state: 'thank-you' } },
             {
                 path: 'about', component: AboutComponent, data: { state: 'about' },
                 children: [
